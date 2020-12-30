@@ -99,14 +99,24 @@
     <Compile Include="Infrastructure\Registries\ServiceRegistry.cs" />
     <Compile Include="Infrastructure\Registries\SingletonConvention.cs" />
     <Compile Include="Infrastructure\Registries\ViewModelRegistry.cs" />
+    <Compile Include="Messages\ActivateUserMessageScreen.cs" />
+    <Compile Include="Messages\EmployeeAdded.cs" />
+    <Compile Include="Messages\UserMessageType.cs" />
+    <Compile Include="Messages\ViewEmployeeDetail.cs" />
+    <Compile Include="Messages\ViewEmployeeList.cs" />
+    <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Services\ApiServiceBase.cs" />
+    <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Services\IApplicationService.cs" />
+    <Compile Include="Services\IEmployeeService.cs" />
     <Compile Include="Services\IScreenFactory.cs" />
     <Compile Include="Services\ModalDialogService.cs" />
     <Compile Include="Services\ScreenFactory.cs" />
-    <Compile Include="Styles\style.xaml.cs">
-      <DependentUpon>style.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="ViewModels\AddEmployeeViewModel.cs" />
+    <Compile Include="ViewModels\EmployeeDetailViewModel.cs" />
+    <Compile Include="ViewModels\EmployeeListViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\UserMessageViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -129,6 +139,7 @@
     <Page Include="Resources\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Page>
     <Page Include="Resources\IconsNonShared.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -137,6 +148,22 @@
     <Page Include="Styles\style.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserMessageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EmployeeDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EmployeeListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AddEmployeeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MainView.xaml">
       <SubType>Designer</SubType>
@@ -179,8 +206,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Infrastructure\Behaviors\" />
-    <Folder Include="Messages\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

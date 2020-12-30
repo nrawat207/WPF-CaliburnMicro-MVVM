@@ -1,0 +1,55 @@
+﻿<Controls:MetroContentControl  x:Class="WPF_CaliburnMicro_MVVM.Views.AddEmployeeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"      
+        
+        BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
+        BorderThickness="1"
+        >
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="600" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0"  Style="{StaticResource ViewTitle}" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center">
+            Add Employee</TextBlock>
+        
+        <GroupBox Header="Details" Grid.Row="1" Grid.Column="0">
+            <Border  BorderBrush="Black" BorderThickness="1" Padding="4" Background="#eee">
+                <StackPanel >
+                    <DockPanel Margin="2" HorizontalAlignment="Stretch" >
+                        <Label  Content="Name" Style="{StaticResource DefaultLabel}" Width="200"/>
+                        <TextBox Width="200" Margin="0,2,0,0" HorizontalAlignment="Left" Text="{Binding Employee.Name , Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    </DockPanel>
+                    <DockPanel Margin="2" HorizontalAlignment="Stretch" >
+                        <Label  Content="Designation" Style="{StaticResource DefaultLabel}" Width="200"/>
+                        <TextBox Width="200" Margin="0,2,0,0" HorizontalAlignment="Left"  Text="{Binding Employee.Designation, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    </DockPanel>
+                    <DockPanel Margin="2" HorizontalAlignment="Stretch" >
+                        <Label  Content="Department" Style="{StaticResource DefaultLabel}" Width="200"/>
+                        <TextBox Width="200" Margin="0,2,0,0" HorizontalAlignment="Left"  Text="{Binding Employee.Department, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    </DockPanel>
+                    <DockPanel Margin="2" HorizontalAlignment="Stretch" >
+                        <Label  Content="DOB" Style="{StaticResource DefaultLabel}" Width="200"/>
+                        <DatePicker Width="200" Margin="0,2,0,0" HorizontalAlignment="Left"  SelectedDate="{Binding Employee.DOB,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></DatePicker>
+                    </DockPanel>
+
+                </StackPanel>
+            </Border>
+        </GroupBox>
+        <GroupBox Header="ACTION" Grid.Row="2">
+            <Border   BorderBrush="Black" BorderThickness="1" Padding="4" Background="#eee">
+                <StackPanel >
+                    <DockPanel  HorizontalAlignment="Center"  >
+                        <Button  x:Name="Add"  Content="Add"  IsDefault="True" Style="{StaticResource NormalButton}" />
+                    </DockPanel>
+
+                </StackPanel>
+            </Border>
+        </GroupBox>
+    </Grid>
+</Controls:MetroContentControl>
