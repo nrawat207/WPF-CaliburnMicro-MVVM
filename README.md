@@ -8,5 +8,6 @@ This is sample code to create WPF application using Caliburn Micro MVVM framewor
 "StructureMap" version="4.7.1"
 
 # Output:
-
+![alt text](https://github.com/nrawat207/WPF-CaliburnMicro-MVVM/blob/main/media/Add.jpg)
+![alt text](https://github.com/nrawat207/WPF-CaliburnMicro-MVVM/blob/main/media/ViewList.jpg)
 ![alt text](https://github.com/nrawat207/WPF-CaliburnMicro-MVVM/blob/main/media/ViewDetail.jpg)
